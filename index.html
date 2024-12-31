@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+
+let totalBalance = 100000
+
+let userIput = +prompt(`Your Total Balance is ${totalBalance}
+
+1)Send Money
+2)Pay Bills
+3)Mobile Loads
+4)CNIC Transfer
+5)Traffic Challan
+
+Press 1, 2, 3, 4 or 5
+`)
+
+
+if (userIput == '1') {
+    let sendMoney = +prompt(`
+    1)Bank Transfer
+    2)Other Wallet Transfer
+    `)
+    if (sendMoney == 1) {
+        let bankTransfer = +prompt(`Enter Account Number`)
+        let amount = +prompt(`Enter Amount to Send`)
+
+        if (totalBalance < amount) {
+            document.write('Insufficient Balance')
+        }else{
+            document.write(`Bank transfer succesfully to ${bankTransfer}`)
+            document.write(`<br>`)
+            document.write(`Your Remaining Balance: ${totalBalance - amount}`)
+
+        }
+
+       
+    }else if (sendMoney == 2) {
+        let otherWallet = +prompt(`
+        1)Jazzcash
+        2)EasyPaisa
+        3)Sadapay
+        4)Nayapay
+        `)
+        if (otherWallet == '1' || otherWallet == '2' || otherWallet == '3' || otherWallet == '4') {
+
+        
+        let bankTransfer = +prompt(`Enter Account Number`)
+        let amount = +prompt(`Enter Amount to Send`)
+
+        if (totalBalance < amount) {
+            document.write('Insufficient Balance')
+        }else{
+            document.write(`Bank transfer succesfully to ${bankTransfer}`)
+            document.write(`<br>`)
+            document.write(`Your Remaining Balance: ${totalBalance - amount}`)
+
+        }
+    }
+    }
+
+}
+
+
+
+if (userIput == '2') {
+    let payBill = +prompt(`
+    1)Electricity
+    2)Gass
+    `)
+    if (payBill == 1) {
+        let electricity = +prompt(`Enter Customer Number`)
+        let amount = +prompt(`Enter Bill Amount`)
+
+        if (totalBalance < amount) {
+            document.write('Insufficient Balance')
+        }else{
+            document.write(`Bill Payed succesfully to ${electricity}`)
+            document.write(`<br>`)
+            document.write(`Your Remaining Balance: ${totalBalance - amount}`)
+
+        }
+
+       
+    }else if (payBill == 2) {
+        let electricity = +prompt(`Enter Customer Number`)
+        let amount = +prompt(`Enter Bill Amount`)
+
+        if (totalBalance < amount) {
+            document.write('Insufficient Balance')
+        }else{
+            document.write(`Bill Payed succesfully to ${electricity}`)
+            document.write(`<br>`)
+            document.write(`Your Remaining Balance: ${totalBalance - amount}`)
+
+        }
+}
+}
+
+
+if (userIput == 3) {
+    let load = +prompt(`Enter Mobile Number`)
+        let amount = +prompt(`Enter Amount`)
+
+        if (totalBalance < amount) {
+            document.write('Insufficient Balance')
+        }else{
+            document.write(`Mobile load succesfully to ${load}`)
+            document.write(`<br>`)
+            document.write(`Your Remaining Balance: ${totalBalance - amount}`)
+
+        }
+}   
+
+
+
+if (userIput == 4) {
+    let cnic = +prompt(`Enter CNIC Number`)
+        let amount = +prompt(`Enter Amount`)
+
+        if (totalBalance < amount) {
+            document.write('Insufficient Balance')
+        }else{
+            document.write(`Amount Send to CNIC ${cnic}`)
+            document.write(`<br>`)
+            document.write(`Your Remaining Balance: ${totalBalance - amount}`)
+
+        }
+}   
+
+
+
+if (userIput == 5) {
+    let challan = +prompt(`Enter Challan Number`)
+        let amount = +prompt(`Enter Challan Amount`)
+
+        if (totalBalance < amount) {
+            document.write('Insufficient Balance')
+        }else{
+            document.write(`Challan Paid succesfully to ${challan}`)
+            document.write(`<br>`)
+            document.write(`Your Remaining Balance: ${totalBalance - amount}`)
+
+        }
+}
+
+if (userIput !== 1 && userIput !== 2 && userIput !== 3 && userIput !== 4 && userIput !== 5) {
+    alert('Wrong Input')
+}
+
+</script>
+
+
+
+</body>
+</html>
